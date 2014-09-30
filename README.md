@@ -1,4 +1,4 @@
-Image Galler Threejs
+Image Gallery Threejs
 =====================
 
 
