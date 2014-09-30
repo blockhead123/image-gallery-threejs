@@ -1,4 +1,4 @@
-image-gallery-threejs
+Image Gallery Threejs
 =====================
 
-Threejs Based Gallery
+
