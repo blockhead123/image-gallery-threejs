@@ -1,0 +1,17 @@
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family: Monospace;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+A:link {text-decoration: none; color: #86b0b0;}
+A:visited {text-decoration: none; color: #86b0b0;}
+A:active {text-decoration: none; color: #86b0b0;}
+A:hover {text-decoration: underline; color: #00e5e5;}
