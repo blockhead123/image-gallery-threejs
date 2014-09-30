@@ -92,7 +92,7 @@ function init() {
         {src:"image7.jpg", id:"image7"},
     ];
 
-    var queue = new createjs.LoadQueue(false, "http://localhost/image-gallery-threejs/images/");
+    var queue = new createjs.LoadQueue(false, "http://localhost/image-gallery-threejs/src/images/");
     queue.addEventListener("progress", handleImageLoadProgress);
     queue.addEventListener("complete", handleImageLoadComplete);
     queue.addEventListener("fileload", handleImageLoad);
