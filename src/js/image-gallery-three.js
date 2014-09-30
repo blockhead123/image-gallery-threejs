@@ -118,7 +118,6 @@ function init() {
          // image loaded
     }
 
-    // PLANES
     function createPlanes() {
         len = manifest.length;
         planes = [];
@@ -183,7 +182,10 @@ function init() {
     animate();
 }
 
-//________________________________________________________ MOUSE WHEEL
+/**
+ * Mouse Wheel
+ * @param event
+ */
 function mouseWheel(event) {
     var delta = 0;
     if (!event) event = window.event;   /* IE  */
@@ -196,7 +198,10 @@ function mouseWheel(event) {
     if(delta && tweening===false) gotoDir(delta/Math.abs(delta));
 }
 
-//________________________________________________________ GOTO DIRECTION < >
+/**
+ * Go to Direction
+ * @param direction
+ */
 function gotoDir(direction)
 {
     select ++;
@@ -216,7 +221,10 @@ function gotoDir(direction)
     updatePlanes(false);
 }
 
-//________________________________________________________ UPDATE POSITIONS
+/**
+ * Update Planes
+ * @param fast
+ */
 function updatePlanes(fast)
 {
     var plane_x, plane_z;
