@@ -44,8 +44,14 @@ Options
         <th>
             Type
         </th>
+        <th>
+            Default
+        </th>
         <th colspan=3>
             Description
+        </th>
+        <th>
+            Example
         </th>
     </tr>
     <tr>
@@ -55,15 +61,12 @@ Options
         <td>
             Array
         </td>
+        <td>
+        </td>
         <td colspan=3>
             List of image paths
         </td>
-    </tr>
-    <tr>
-        <td colspan=2>
-        </td>
         <td>
-          Example: 
             [
               {src:"image1.jpg", id:"image1"},
               {src:"image2.jpg", id:"image2"},
@@ -74,5 +77,76 @@ Options
               {src:"image7.jpg", id:"image7"}
             ]
         </td>
-    </td>
+    </tr>
+    <tr>
+      <td colspan=7>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            imagePath
+        </td>
+        <td>
+            String
+        </td>
+        <td>
+        </td>
+        <td colspan=4>
+            Path to the specific image listings
+        </td>
+    </tr>
+    <tr>
+      <td colspan=7>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            dx
+        </td>
+        <td>
+            Number
+        </td>
+        <td>
+            300
+        </td>
+        <td colspan=4>
+            horizontal spacing of Images
+        </td>
+    </tr>
+    <tr>
+      <td colspan=7>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            dz
+        </td>
+        <td>
+            Number
+        </td>
+        <td>
+            300
+        </td>
+        <td colspan=4>
+            Vertical spacing of Images
+        </td>
+    </tr>
+    <tr>
+      <td colspan=7>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            deltaRotation
+        </td>
+        <td>
+            Number
+        </td>
+        <td>
+            45
+        </td>
+        <td colspan=4>
+            Degress Rotation of the non active images
+        </td>
+    </tr>
 </table>
