@@ -74,16 +74,6 @@
             var ambientLight = new THREE.AmbientLight(0xffffff);
             scene.add(ambientLight);
 
-            // TOGGLE FULLSCREEN
-            var toggle = document.createElement( 'divtoggle' );
-            toggle.style.position = 'absolute';
-            toggle.style.top = '25px';
-            toggle.style.width = '100%';
-            toggle.style.textAlign = 'center';
-            console.log("window.innerWidth: ", window.innerWidth);
-            container.appendChild(toggle);
-
-
             // CAROUSEL GROUP
             group = new THREE.Object3D();
             group.position.y = planeSize/2;
@@ -102,9 +92,7 @@
             preloaderLine.scale.x = 0;
             preloader.add(preloaderLine);
 
-
             // IMAGE PRELOADER
-
             var queue = new createjs.LoadQueue(false, imagePath);
             queue.addEventListener("progress", handleImageLoadProgress);
             queue.addEventListener("complete", handleImageLoadComplete);
