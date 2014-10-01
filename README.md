@@ -35,7 +35,6 @@ Example
 Options
 -------
 
-
 <table>
     <tr>
         <th>
@@ -255,5 +254,35 @@ Options
         <td colspan=4>
             Setting the position of the progress bar
         </td>
+    </tr>
+</table>
+
+Events
+------
+
+<table>
+    <tr>
+      <th>
+        onImageLoadProgress
+      </th>
+      <td>
+        Image load progress
+      </td>
+    </tr>
+    <tr>
+      <th>
+        onImageLoadComplete
+      </th>
+      <td>
+        Image load complete
+      </td>
+    </tr>
+    <tr>
+      <th>
+        onImageLoad
+      </th>
+      <td>
+        Image load initialization
+      </td>
     </tr>
 </table>
