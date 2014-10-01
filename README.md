@@ -37,33 +37,7 @@ Options
             Array
         </td>
         <td colspan=3>
-            percentage of active box over the rest
-        </td>
-    </tr>
-    <tr>
-        <th colspan=2>
-        </th>
-        <th>
-            Property
-        </th>
-        <th>
-            Type
-        </th>
-        <th>
-            Value
-        </th>
-    </tr>
-    <tr>
-        <td colspan=2>
-        </td>
-        <td>
-            Default
-        </td>
-        <td>
-            pixels
-        </td>
-        <td>
-            75
+            List of image paths
         </td>
     </tr>
 </table>
