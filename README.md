@@ -210,13 +210,13 @@ Options
       </td>
     </tr>
     <tr>
-        <td colspan=6>
+        <td colspan=7>
             progress
         </td>
     </tr>
     <tr>
         <td>
-            light
+            - light
         </td>
         <td>
             Hex
@@ -230,7 +230,7 @@ Options
     </tr>
     <tr>
         <td>
-            ambientLight
+            - ambientLight
         </td>
         <td>
             Hex
@@ -244,7 +244,7 @@ Options
     </tr>
     <tr>
         <td>
-            position
+            - position
         </td>
         <td>
             Array
