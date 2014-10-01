@@ -16,7 +16,8 @@
             deltaRotation: 45,
             planeSize: 500,
             manifest: [],
-            imagePath: ''
+            imagePath: '',
+            alphaBackground: true
         }, options );
 
         var ig3js = this;
@@ -55,7 +56,7 @@
 
             // RENDERER
             if ( Detector.webgl) {
-                renderer = new THREE.WebGLRenderer( {antialias:true} );
+                renderer = new THREE.WebGLRenderer( {antialias:true, alpha: settings.alphaBackground} );
             } else {
                 renderer = new THREE.CanvasRenderer();
             }

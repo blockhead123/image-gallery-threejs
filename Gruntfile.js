@@ -15,6 +15,9 @@ module.exports = function(grunt) {
                 },{
                     from: 'image-gallery-three.css',                   // string replacement
                     to: 'image-gallery-three.min.css'
+                },{
+                    from: 'style.css',                   // string replacement
+                    to: 'style.min.css'
                 }]
             }
         },
@@ -30,6 +33,10 @@ module.exports = function(grunt) {
             styles: {
                 src: ['src/css/image-gallery-three.css'],
                 dest: 'dist/css/image-gallery-three.min.css'
+            },
+            styles: {
+                src: ['src/css/style.css'],
+                dest: 'dist/css/style.min.css'
             }
         }
     });
