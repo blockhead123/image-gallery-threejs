@@ -62,6 +62,7 @@ Options
             Array
         </td>
         <td>
+            Null
         </td>
         <td colspan=3>
             List of image paths
@@ -90,6 +91,7 @@ Options
             String
         </td>
         <td>
+            Null
         </td>
         <td colspan=4>
             Path to the specific image listings
