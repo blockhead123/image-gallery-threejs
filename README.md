@@ -248,7 +248,7 @@ Options
             Array
         </td>
         <td>
-            [0, 100, 0]
+            [0,100,0]
         </td>
         <td colspan=4>
             Setting the position of the progress bar
