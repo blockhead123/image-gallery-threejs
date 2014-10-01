@@ -4,6 +4,9 @@ Image Gallery Threejs
   Threejs based Gallery/Slider Plugin for JQuery
   
 
+[Demo](http://image-gallery-threejs.zholpe.com/)
+-------
+
 Example
 -------
 
