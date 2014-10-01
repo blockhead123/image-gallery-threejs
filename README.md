@@ -1,7 +1,11 @@
 Image Gallery Threejs
 =====================
 
-  Threejs based Gallery/Slider Plugin for JQuery
+  Threejs based Gallery/Slider Plugin for JQuery.
+  
+Version
+-------
+Alpha 0.0.1
   
 
 [Demo](http://image-gallery-threejs.zholpe.com/)
