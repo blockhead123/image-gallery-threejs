@@ -17,7 +17,16 @@
             planeSize: 500,
             manifest: [],
             imagePath: '',
-            alphaBackground: true
+            alphaBackground: true,
+            antialias: true,
+            progress: {
+                light: "#ff0000",
+                ambientLight: "#ffffff",
+                position: [0, 100, 0]
+            },
+            onImageLoadProgress: null,
+            onImageLoadComplete: null,
+            onImageLoad: null
         }, options );
 
         var ig3js = this;
@@ -56,7 +65,7 @@
 
             // RENDERER
             if ( Detector.webgl) {
-                renderer = new THREE.WebGLRenderer( {antialias:true, alpha: settings.alphaBackground} );
+                renderer = new THREE.WebGLRenderer( {antialias:settings.antialias, alpha: settings.alphaBackground} );
             } else {
                 renderer = new THREE.CanvasRenderer();
             }
@@ -67,12 +76,12 @@
             container.appendChild(renderer.domElement);
 
             // POINT LIGHT
-            var light = new THREE.PointLight(0xff0000);
+            var light = new THREE.PointLight(settings.progress.light);
             light.position.set(500, 500, 0);
             scene.add(light);
 
             // AMBIEND LIGHT
-            var ambientLight = new THREE.AmbientLight(0xffffff);
+            var ambientLight = new THREE.AmbientLight(settings.progress.ambientLight);
             scene.add(ambientLight);
 
             // CAROUSEL GROUP
@@ -82,13 +91,13 @@
 
             // PRELOADER
             var preloader = new THREE.Object3D();
-            preloader.position.set(0, 100, 0);
+            preloader.position.set(settings.progress.position[0], settings.progress.position[1], settings.progress.position[2]);
             scene.add(preloader);
 
-            var preloaderBg = new THREE.Mesh(new THREE.PlaneGeometry(500, 30, 1, 1), new THREE.MeshBasicMaterial( { color: 0x0f0f2e, transparent:true } ) );
+            var preloaderBg = new THREE.Mesh(new THREE.PlaneGeometry(500, 30, 1, 1), new THREE.MeshBasicMaterial( { color: "#0f0f2e", transparent:true } ) );
             preloader.add(preloaderBg);
 
-            var preloaderLine = new THREE.Mesh(new THREE.PlaneGeometry(494, 24, 1, 1), new THREE.MeshBasicMaterial( { color: 0x00e5e5, transparent:true } ) );
+            var preloaderLine = new THREE.Mesh(new THREE.PlaneGeometry(494, 24, 1, 1), new THREE.MeshBasicMaterial( { color: "#00e5e5", transparent:true } ) );
             preloaderLine.position.set(0, 0, 1);
             preloaderLine.scale.x = 0;
             preloader.add(preloaderLine);
@@ -363,6 +372,33 @@
                 }
             }
         }
+
+        /**
+         * Evaluate Event
+         * @param event
+         * @param thisEvent
+         */
+        var evalEvent = function(event,thisEvent){
+            if(event != false){
+                event(thisEvent);
+            }
+        };
+
+        // TRIGGER EVENTS
+        ig3js.triggerEvent = function(event){
+            if(event == "on-image-load-complete"){
+                evalEvent(settings.onImageLoadComplete,this);
+                return;
+            }
+            if(event == "on-image-load-progress"){
+                evalEvent(settings.onImageLoadProgress,this);
+                return;
+            }
+            if(event == "on-image-load"){
+                evalEvent(settings.onImageLoad,this);
+                return;
+            }
+        };
 
         ig3js.init();
 
