@@ -59,4 +59,20 @@ Options
             List of image paths
         </td>
     </tr>
+    <tr>
+        <td colspan=2>
+        </td>
+        <td>
+          Example: 
+            [
+              {src:"image1.jpg", id:"image1"},
+              {src:"image2.jpg", id:"image2"},
+              {src:"image3.jpg", id:"image3"},
+              {src:"image4.jpg", id:"image4"},
+              {src:"image5.jpg", id:"image5"},
+              {src:"image6.jpg", id:"image6"},
+              {src:"image7.jpg", id:"image7"}
+            ]
+        </td>
+    </td>
 </table>
