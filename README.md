@@ -262,25 +262,25 @@ Events
 
 <table>
     <tr>
-      <th>
+      <td>
         onImageLoadProgress
-      </th>
+      </td>
       <td>
         Image load progress
       </td>
     </tr>
     <tr>
-      <th>
+      <td>
         onImageLoadComplete
-      </th>
+      </td>
       <td>
         Image load complete
       </td>
     </tr>
     <tr>
-      <th>
+      <td>
         onImageLoad
-      </th>
+      </td>
       <td>
         Image load initialization
       </td>
