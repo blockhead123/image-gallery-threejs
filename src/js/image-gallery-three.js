@@ -26,7 +26,8 @@
             },
             onImageLoadProgress: null,
             onImageLoadComplete: null,
-            onImageLoad: null
+            onImageLoad: null,
+            stats: false
         }, options );
 
         var ig3js = this;
@@ -177,13 +178,15 @@
             // PROJECTOR
             projector = new THREE.Projector();
 
-            // STATS
-            stats = new Stats();
-            stats.domElement.style.position = 'absolute';
-            stats.domElement.style.left = '0px';
-            stats.domElement.style.top = '0px';                //stats.domElement.style.bottom = '0px';
-            stats.domElement.style.zIndex = 100;
-            container.appendChild( stats.domElement );
+            if(settings.stats == true){
+                // STATS
+                stats = new Stats();
+                stats.domElement.style.position = 'absolute';
+                stats.domElement.style.left = '0px';
+                stats.domElement.style.top = '0px';                //stats.domElement.style.bottom = '0px';
+                stats.domElement.style.zIndex = 100;
+                container.appendChild( stats.domElement );
+            }
 
             // RESIZE
             window.addEventListener('resize', resizeHandler, false);
@@ -343,7 +346,9 @@
 
         function animate() {
             requestAnimationFrame(animate);
-            stats.update();
+            if(settings.stats==true){
+                stats.update();
+            }
             render();
         }
 
