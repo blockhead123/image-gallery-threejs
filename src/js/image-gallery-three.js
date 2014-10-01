@@ -1,3 +1,5 @@
+// Title: Image Gallery Threejs Jquery
+// Description: Usage of Threejs to create jquery animated gallery.
 // Author: Oliver Ong
 // forked from djankey's "WebGL Carousel  - Three.js" http://jsdo.it/djankey/carousel_webgl
 // I have reinvented the structure and made it jquery based as well as making it a plugin so that usage and customization is easily done
@@ -12,7 +14,9 @@
             dx: 300,
             dz: 300,
             deltaRotation: 45,
-            planeSize: 500
+            planeSize: 500,
+            manifest: [],
+            imagePath: ''
         }, options );
 
         var ig3js = this;
@@ -36,7 +40,9 @@
             show = 2,
             deltaRotation = settings.deltaRotation,
             half = 0,
-            tweening = false;
+            tweening = false,
+            manifest = settings.manifest,
+            imagePath = settings.imagePath;
 
         ig3js.init = function() {
             // SCENE
@@ -98,17 +104,8 @@
 
 
             // IMAGE PRELOADER
-            var manifest = [
-                {src:"image1.jpg", id:"image1"},
-                {src:"image2.jpg", id:"image2"},
-                {src:"image3.jpg", id:"image3"},
-                {src:"image4.jpg", id:"image4"},
-                {src:"image5.jpg", id:"image5"},
-                {src:"image6.jpg", id:"image6"},
-                {src:"image7.jpg", id:"image7"},
-            ];
 
-            var queue = new createjs.LoadQueue(false, "http://localhost/image-gallery-threejs/src/images/");
+            var queue = new createjs.LoadQueue(false, imagePath);
             queue.addEventListener("progress", handleImageLoadProgress);
             queue.addEventListener("complete", handleImageLoadComplete);
             queue.addEventListener("fileload", handleImageLoad);
