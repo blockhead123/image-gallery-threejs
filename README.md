@@ -149,4 +149,109 @@ Options
             Degress Rotation of the non active images
         </td>
     </tr>
+    <tr>
+      <td colspan=7>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            planeSize
+        </td>
+        <td>
+            Number
+        </td>
+        <td>
+            500
+        </td>
+        <td colspan=4>
+            Size of the active plane
+        </td>
+    </tr>
+    <tr>
+      <td colspan=7>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            alphaBackground
+        </td>
+        <td>
+            Boolean
+        </td>
+        <td>
+            true
+        </td>
+        <td colspan=4>
+            Setting if the background is transparent
+        </td>
+    </tr>
+    <tr>
+      <td colspan=7>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            antialias
+        </td>
+        <td>
+            Boolean
+        </td>
+        <td>
+            true
+        </td>
+        <td colspan=4>
+            Setting if the renderer processes the objects with antialias
+        </td>
+    </tr>
+    <tr>
+      <td colspan=7>
+      </td>
+    </tr>
+    <tr>
+        <td colspan=6>
+            progress
+        </td>
+    </tr>
+    <tr>
+        <td>
+            light
+        </td>
+        <td>
+            Hex
+        </td>
+        <td>
+            "#ff0000"
+        </td>
+        <td colspan=4>
+            Setting the color of the progress bar's light aspect
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ambientLight
+        </td>
+        <td>
+            Hex
+        </td>
+        <td>
+            "#ffffff"
+        </td>
+        <td colspan=4>
+            Setting the color of the progress bar's ambient light aspect
+        </td>
+    </tr>
+    <tr>
+        <td>
+            position
+        </td>
+        <td>
+            Array
+        </td>
+        <td>
+            [0, 100, 0]
+        </td>
+        <td colspan=4>
+            Setting the position of the progress bar
+        </td>
+    </tr>
 </table>
