@@ -23,7 +23,7 @@
 
 <script type='text/javascript'>//<![CDATA[
 $(function(){
-    $(".box").ig3js({
+    var box = $(".box").ig3js({
         manifest: [
             {src:"image1.jpg", id:"image1"},
             {src:"image2.jpg", id:"image2"},
@@ -36,12 +36,34 @@ $(function(){
         imagePath: 'images/',
         alphaBackground: true,
         onNavigateComplete: function(obj){
-            console.log("navigation complete");
-            console.log(obj);
+       //     console.log("navigation complete");
+       //     console.log(obj);
         }
     });
+
+    $(".next").click(function(){
+        box.navigate.next();
+        return false;
+    });
+
+    $(".prev").click(function(){
+        box.navigate.prev();
+        return false;
+    });
+
+    for(count=1; count<=7; count++){
+        $(".goto").append('<a href="#" class="goto'+count+'" pos="'+(count-1)+'"> '+count+' </a>');
+        $(".goto"+count).click(function(){
+            box.navigate.goTo($(this).attr("pos"));
+            return false;
+        });
+    }
+
 });//]]>
 
 </script>
+<a href="#" class="prev">prev</a>
+<div class="goto"></div>
+<a href="#" class="next">next</a>
 </body>
 </html>

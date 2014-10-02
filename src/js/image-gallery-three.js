@@ -360,6 +360,27 @@
             }
         }
 
+        ig3js.navigate = {
+            next: function(){
+                if( (slides.length) > activePlane + 1){
+                    gotoImage(activePlane+1);
+                }
+                else{
+                    gotoImage(0);
+                }
+            },
+            prev: function(){
+                if( (activePlane) > 0){
+                    gotoImage(activePlane-1);
+                }
+                else{
+                    gotoImage(slides.length-1);
+                }
+            },
+            goTo: function(i){
+                gotoImage(i);
+            }
+        };
 
         function resizeHandler() {
             camera.aspect = window.innerWidth / window.innerHeight;
