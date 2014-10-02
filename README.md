@@ -18,7 +18,7 @@ http://www.greensock.com/gsap-js/
 **PreloadJS**
 http://www.createjs.com/#!/PreloadJS
 
-Browser Compatiblity
+Browser Compatibility
 ------
 + Firefox - 30.0.0 +
 + Chrome - 35.0.0 +
