@@ -281,26 +281,63 @@ Events
 <table>
     <tr>
       <td>
-        onImageLoadProgress
+        <b>onImageLoadProgress</b>
       </td>
-      <td>
+      <td colspan=2>
         Image load progress
       </td>
     </tr>
     <tr>
-      <td>
-        onImageLoadComplete
-      </td>
-      <td>
-        Image load complete
+      <td colspan=3>
       </td>
     </tr>
     <tr>
       <td>
-        onImageLoad
+        <b>onImageLoadComplete</b>
+      </td>
+      <td colspan=2>
+        Image load complete
+      </td>
+    </tr>
+    <tr>
+      <td colspan=3>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>onImageLoad</b>
+      </td>
+      <td colspan=2>
+        Image load initialization
+      </td>
+    </tr>
+    <tr>
+      <td colspan=3>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>onNavigateComplete</b>
+      </td>
+      <td colspan=2>
+        Navigation Complete
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td colspan=2>
+        Parameters
+      </td>
+    </tr>
+    <tr>
+      <td>
       </td>
       <td>
-        Image load initialization
+        obj
+      </td>
+      <td>
+        active plane
       </td>
     </tr>
 </table>
