@@ -20,12 +20,12 @@ http://www.createjs.com/#!/PreloadJS
 
 Browser Compatiblity
 ------
-Firefox - 30.0.0 +
-Chrome - 35.0.0 +
-Explorer: 9 +
-Safari: not tested help test :)
-Mobile Chrome: not tested help test :)
-Mobile Safari: not tested help test :)
++ Firefox - 30.0.0 +
++ Chrome - 35.0.0 +
++ Explorer: 9 +
++ Safari: not tested help test :)
++ Mobile Chrome: not tested help test :)
++ Mobile Safari: not tested help test :)
   
 Version
 -------
