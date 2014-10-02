@@ -51,6 +51,16 @@ $(function(){
         return false;
     });
 
+    $(".defP").click(function(){
+        box.perspective.default();
+        return false;
+    });
+
+    $(".trP").click(function(){
+        box.perspective.topRight();
+        return false;
+    });
+
     for(count=1; count<=7; count++){
         $(".goto").append('<a href="#" class="goto'+count+'" pos="'+(count-1)+'"> '+count+' </a>');
         $(".goto"+count).click(function(){
@@ -62,8 +72,10 @@ $(function(){
 });//]]>
 
 </script>
-<a href="#" class="prev">prev</a>
+<a href="#" class="prev">prev</a><br />
 <div class="goto"></div>
-<a href="#" class="next">next</a>
+<a href="#" class="next">next</a><br />
+<a href="#" class="defP">default perspective</a><br />
+<a href="#" class="trP">top right perspective</a><br />
 </body>
 </html>

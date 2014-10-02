@@ -55,7 +55,8 @@
             tweening = false,
             manifest = settings.manifest,
             imagePath = settings.imagePath,
-            activePlane = 0;
+            activePlane = 0,
+            speedP = 1;
 
         ig3js.init = function() {
             // SCENE
@@ -379,6 +380,96 @@
             },
             goTo: function(i){
                 gotoImage(i);
+            }
+        };
+
+        var boxTest = {
+            position:  {
+                x: 0,
+                y: 100,
+                z: 1000
+            },
+            rotation: {
+                x: 0,
+                y: 0,
+                z: 0
+            }
+        };
+
+        var setPerspective = function(arg){
+
+            TweenMax.to(boxTest.position, speedP, {
+                x:arg.position.x,
+                y:arg.position.y,
+                z: arg.position.z,
+                onUpdate: function(){
+                    camera.position.set(this.target.x, this.target.y, this.target.z);
+                }});
+            TweenMax.to(boxTest.rotation, speedP, {
+                x: arg.rotation.x * Math.PI / 180,
+                y: arg.rotation.y * Math.PI / 180,
+                z: arg.rotation.z * Math.PI / 180,
+                onUpdate: function(){
+                    console.log(this.target.x);
+                    camera.rotation.x = this.target.x;
+                    camera.rotation.y = this.target.y;
+                    camera.rotation.z = this.target.z;
+                }});
+        };
+
+        ig3js.perspective = {
+            default: function(){
+
+                var arg = {
+                    position:  {
+                        x: 0,
+                        y: 100,
+                        z: 1000
+                    },
+                    rotation: {
+                        x: 0,
+                        y: 0,
+                        z: 0
+                    }
+                };
+
+                setPerspective(arg);
+            },
+            topRight: function(){
+
+                var arg = {
+                    position:  {
+                        x: 600,
+                        y: 500,
+                        z: 800
+                    },
+                    rotation: {
+                        x: -20,
+                        y: 30,
+                        z: 10
+                    }
+                };
+
+                setPerspective(arg);
+
+            },
+            topLeft: function(){
+
+                var arg = {
+                    position:  {
+                        x: -600,
+                        y: 500,
+                        z: 800
+                    },
+                    rotation: {
+                        x: -20,
+                        y: -30,
+                        z: -10
+                    }
+                };
+
+                setPerspective(arg);
+
             }
         };
 
