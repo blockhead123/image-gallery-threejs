@@ -453,7 +453,7 @@ Methods
       &lt;object&gt;.perspective.default();
     </td>
     <td colspan=3>
-      Animates to the next scene
+      Sets the camera perspective default
     </td>
   </tr>
   <tr>
@@ -465,7 +465,7 @@ Methods
       &lt;object&gt;.perspective.topRight();
     </td>
     <td colspan=3>
-      Animates to the next scene
+      Sets the camera perspective top right
     </td>
   </tr>
   <tr>
@@ -477,7 +477,7 @@ Methods
       &lt;object&gt;.perspective.topLeft();
     </td>
     <td colspan=3>
-      Animates to the next scene
+      Sets the camera perspective top left
     </td>
   </tr>
 </table>
