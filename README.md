@@ -444,4 +444,40 @@ Methods
 			});<br/><br/>
     </td>
   </tr>
+  <tr>
+    <td colspan=4>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.perspective.default();
+    </td>
+    <td colspan=3>
+      Sets the camera perspective default
+    </td>
+  </tr>
+  <tr>
+    <td colspan=4>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.perspective.topRight();
+    </td>
+    <td colspan=3>
+      Sets the camera perspective top right
+    </td>
+  </tr>
+  <tr>
+    <td colspan=4>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.perspective.topLeft();
+    </td>
+    <td colspan=3>
+      Sets the camera perspective top left
+    </td>
+  </tr>
 </table>
