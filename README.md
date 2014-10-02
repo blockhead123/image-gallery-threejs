@@ -4,6 +4,20 @@ Image Gallery Threejs
   Threejs based Gallery/Slider Plugin for JQuery.
   This was forked from djankey's "WebGL Carousel  - Three.js" http://jsdo.it/djankey/carousel_webgl it didn't have jquery handling on it as well as better handling of controls for customization.
   
+Required Libraries:
+-------
+**Three.js**
+https://github.com/mrdoob/three.js/
+
+**Stats.js**
+https://github.com/mrdoob/stats.js/
+
+**TweenMax**
+http://www.greensock.com/gsap-js/
+
+**PreloadJS**
+http://www.createjs.com/#!/PreloadJS
+  
 Version
 -------
 Alpha 0.0.1
@@ -340,4 +354,94 @@ Events
         active plane
       </td>
     </tr>
+</table>
+
+Methods
+-------
+
+<table>
+  <tr>
+    <th>
+      Execution
+    </th>
+    <th colspan=3>
+      Description
+    </th>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.next();
+    </td>
+    <td colspan=3>
+      Animates to the next scene
+    </td>
+  </tr>
+  <tr>
+    <td colspan=4>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.prev();
+    </td>
+    <td colspan=3>
+      Animates to the previous scene
+    </td>
+  </tr>
+  <tr>
+    <td colspan=4>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.goTo(&lt;index&gt;);
+    </td>
+    <td colspan=3>
+      Animates to the a specific scene
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td colspan=3>
+      <b>Parameter</b>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+      index
+    </td>
+    <td>
+      Number
+    </td>
+    <td>
+      base zero position of the plane in an array.
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td colspan=3>
+      <b>Example</b>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td colspan=3>
+			$(function(){<br/>
+			&nbsp; &nbsp; var box = $(&quot;.box&quot;).ig3js({<br/>
+			&nbsp; &nbsp; &nbsp; &nbsp; manifest: [<br/>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {src:&quot;image1.jpg&quot;, id:&quot;image1&quot;},<br/>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {src:&quot;image2.jpg&quot;, id:&quot;image2&quot;},<br/>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {src:&quot;image3.jpg&quot;, id:&quot;image3&quot;},<br/>
+			&nbsp; &nbsp; &nbsp; &nbsp; ],<br/>
+			&nbsp; &nbsp; &nbsp; &nbsp; imagePath: &#39;images/&#39;,<br/>
+			&nbsp; &nbsp; });<br/>
+			&nbsp; &nbsp; box.navigate.goTo(2);<br/>
+			});<br/><br/>
+    </td>
+  </tr>
 </table>
