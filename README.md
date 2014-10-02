@@ -444,4 +444,40 @@ Methods
 			});<br/><br/>
     </td>
   </tr>
+  <tr>
+    <td colspan=4>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.perspective.default();
+    </td>
+    <td colspan=3>
+      Animates to the next scene
+    </td>
+  </tr>
+  <tr>
+    <td colspan=4>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.perspective.topRight();
+    </td>
+    <td colspan=3>
+      Animates to the next scene
+    </td>
+  </tr>
+  <tr>
+    <td colspan=4>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.perspective.topLeft();
+    </td>
+    <td colspan=3>
+      Animates to the next scene
+    </td>
+  </tr>
 </table>
