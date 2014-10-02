@@ -255,6 +255,24 @@ Options
             Setting the position of the progress bar
         </td>
     </tr>
+    <tr>
+      <td colspan=7>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            stats
+        </td>
+        <td>
+            Boolean
+        </td>
+        <td>
+            false
+        </td>
+        <td colspan=4>
+            sets if stats is shown or hidden.
+        </td>
+    </tr>
 </table>
 
 Events
