@@ -17,10 +17,19 @@ http://www.greensock.com/gsap-js/
 
 **PreloadJS**
 http://www.createjs.com/#!/PreloadJS
+
+Browser Compatiblity
+------
+Firefox - 30.0.0 +
+Chrome - 35.0.0 +
+Explorer: 9 +
+Safari: not tested help test :)
+Mobile Chrome: not tested help test :)
+Mobile Safari: not tested help test :)
   
 Version
 -------
-Alpha 0.0.1
+Beta 0.1.1
   
 
 [Demo](http://image-gallery-threejs.zholpe.com/)
