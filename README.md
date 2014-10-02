@@ -281,7 +281,7 @@ Events
 <table>
     <tr>
       <td>
-        onImageLoadProgress
+        <b>onImageLoadProgress</b>
       </td>
       <td colspan=2>
         Image load progress
@@ -293,7 +293,7 @@ Events
     </tr>
     <tr>
       <td>
-        onImageLoadComplete
+        <b>onImageLoadComplete</b>
       </td>
       <td colspan=2>
         Image load complete
@@ -305,7 +305,7 @@ Events
     </tr>
     <tr>
       <td>
-        onImageLoad
+        <b>onImageLoad</b>
       </td>
       <td colspan=2>
         Image load initialization
@@ -317,7 +317,7 @@ Events
     </tr>
     <tr>
       <td>
-        onNavigateComplete
+        <b>onNavigateComplete</b>
       </td>
       <td colspan=2>
         Navigation Complete
