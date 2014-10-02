@@ -27,6 +27,7 @@
             onImageLoadProgress: null,
             onImageLoadComplete: null,
             onImageLoad: null,
+            onNavigateComplete: null,
             stats: false
         }, options );
 
@@ -53,7 +54,8 @@
             half = 0,
             tweening = false,
             manifest = settings.manifest,
-            imagePath = settings.imagePath;
+            imagePath = settings.imagePath,
+            activePlane = 0;
 
         ig3js.init = function() {
             // SCENE
@@ -235,6 +237,12 @@
             updatePlanes(false);
         }
 
+        var onC = function(obj, rot, planes){
+            if(obj==activePlane){
+                ig3js.triggerEvent("on-navigate-complete", planes[activePlane]);
+            }
+        };
+
         /**
          * Update Planes
          * @param fast
@@ -303,13 +311,29 @@
                 plane_z = id * dz;
                 planes[i].visible = tween;
 
-                TweenMax.to(planes[i].position, time * tweenRatio, { x:plane_x, z:-plane_z, delay:delayScale * id *tweenTime/3});
-                TweenMax.to(planes[i].rotation, time * tweenRatio, { y:rot*Math.PI/180, delay:delayScale * id *tweenTime/3});
-                TweenMax.to(planes[i].material, time * tweenRatio, { opacity:sAlpha, delay:delayScale * id *tweenTime/3});
+                if(rot==0){
+                    activePlane = i;
+                }
+
+                TweenMax.to(planes[i].position, time * tweenRatio, {
+                    x:plane_x,
+                    z:-plane_z,
+                    delay:delayScale * id *tweenTime/3,
+                    onComplete: onC,
+                    onCompleteParams:[i, rot, planes] });
+
+                TweenMax.to(planes[i].rotation, time * tweenRatio, {
+                    y:rot*Math.PI/180,
+                    delay:delayScale * id *tweenTime/3 });
+
+                TweenMax.to(planes[i].material, time * tweenRatio, {
+                    opacity:sAlpha,
+                    delay:delayScale * id *tweenTime/3});
 
                 tweening = true;
                 setTimeout(resetTween, time*75);
             }
+
         }
 
         function resetTween() {
@@ -390,7 +414,7 @@
         };
 
         // TRIGGER EVENTS
-        ig3js.triggerEvent = function(event){
+        ig3js.triggerEvent = function(event, obj){
             if(event == "on-image-load-complete"){
                 evalEvent(settings.onImageLoadComplete,this);
                 return;
@@ -401,6 +425,10 @@
             }
             if(event == "on-image-load"){
                 evalEvent(settings.onImageLoad,this);
+                return;
+            }
+            if(event == "on-navigate-complete"){
+                evalEvent(settings.onNavigateComplete,obj);
                 return;
             }
         };

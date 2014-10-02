@@ -34,7 +34,11 @@ $(function(){
             {src:"image7.jpg", id:"image7"}
         ],
         imagePath: 'images/',
-        alphaBackground: true
+        alphaBackground: true,
+        onNavigateComplete: function(obj){
+            console.log("navigation complete");
+            console.log(obj);
+        }
     });
 });//]]>
 
