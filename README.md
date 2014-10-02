@@ -27,10 +27,6 @@ Browser Compatibility
 + Mobile Chrome: not tested help test :)
 + Mobile Safari: not tested help test :)
   
-Version
--------
-Beta 0.1.1
-  
 
 [Demo](http://image-gallery-threejs.zholpe.com/)
 -------
