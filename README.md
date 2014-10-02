@@ -4,6 +4,20 @@ Image Gallery Threejs
   Threejs based Gallery/Slider Plugin for JQuery.
   This was forked from djankey's "WebGL Carousel  - Three.js" http://jsdo.it/djankey/carousel_webgl it didn't have jquery handling on it as well as better handling of controls for customization.
   
+Required Libraries:
+-------
+**Three.js**
+https://github.com/mrdoob/three.js/
+
+**Stats.js**
+https://github.com/mrdoob/stats.js/
+
+**TweenMax**
+http://www.greensock.com/gsap-js/
+
+**PreloadJS**
+http://www.createjs.com/#!/PreloadJS
+  
 Version
 -------
 Alpha 0.0.1
