@@ -16,3 +16,13 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 
 }
+#fork {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../images/github.png") 0 0 no-repeat;
+    display: block;
+    width: 149px;
+    height: 149px;
+    text-indent: -9999px;
+}
