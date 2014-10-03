@@ -1,6 +1,8 @@
 // Title: Image Gallery Threejs Jquery
 // Description: Usage of Threejs to create jquery animated gallery.
 // Author: Oliver Ong
+// URL: https://github.com/blockhead123/image-gallery-threejs
+// Demo: http://image-gallery-threejs.zholpe.com/
 // forked from djankey's "WebGL Carousel  - Three.js" http://jsdo.it/djankey/carousel_webgl
 // I have reinvented the structure and made it jquery based as well as making it a plugin so that usage and customization is easily done
 
