@@ -2,7 +2,7 @@ Image Gallery Threejs
 =====================
 
   Threejs based Gallery/Slider Plugin for JQuery.
-  This was forked from djankey's "WebGL Carousel  - Three.js" http://jsdo.it/djankey/carousel_webgl it didn't have jquery handling on it as well as better handling of controls for customization.
+  This was forked from djankey's "WebGL Carousel  - Three.js" http://jsdo.it/djankey/carousel_webgl it didn't have jquery handling on it as well as better handling of controls for customization. Works well on IOS ipad and iphone aswell ad desktop PCS.
   
 Required Libraries:
 -------
@@ -23,10 +23,11 @@ Browser Compatibility
 + Firefox - 30.0.0 +
 + Chrome - 35.0.0 +
 + Explorer: 9 +
-+ Safari: not tested help test :)
-+ Mobile Chrome: not tested help test :)
-+ Mobile Safari: not tested help test :)
-  
++ Ipad Safari: 7.0.0 +
++ Iphone Safari: 7.0.0 +
++ IOS Safari: 7.0.0 +  
++ Android Chrome: not tested help test :)
++ IOS Chrome: not tested help test :)
 
 [Demo](http://image-gallery-threejs.zholpe.com/)
 -------
