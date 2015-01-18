@@ -160,6 +160,7 @@
                     // mesh / plane
                     var plane = new THREE.Mesh(new THREE.PlaneGeometry(planeSize, planeSize), img_material);
                     plane.overdraw = true;
+                    plane.name = manifest[i].id;
                     plane.position.x = i * dx;
                     group.add(plane);
 
