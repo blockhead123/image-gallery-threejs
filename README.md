@@ -438,7 +438,7 @@ Methods
     </td>
     <td colspan=3>
 			$(function(){<br/>
-			&nbsp; &nbsp; var box = $(&quot;.box&quot;).ig3js({<br/>
+			&nbsp; &nbsp; var box = $.ig3js({<br/>
 			&nbsp; &nbsp; &nbsp; &nbsp; manifest: [<br/>
 			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {src:&quot;image1.jpg&quot;, id:&quot;image1&quot;},<br/>
 			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {src:&quot;image2.jpg&quot;, id:&quot;image2&quot;},<br/>
