@@ -7,7 +7,7 @@
 // I have reinvented the structure and made it jquery based as well as making it a plugin so that usage and customization is easily done
 
 (function( $ ) {
-    $.fn.ig3js = function( options ) {
+    $.ig3js = function( options ) {
 
         // DEFAULT OPTIONS
         var settings = $.extend({
