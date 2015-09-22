@@ -294,6 +294,17 @@ Options
             sets if stats is shown or hidden.
         </td>
     </tr>
+    <tr>
+        <td>
+            canvasWindow
+        </td>
+        <td>
+            canvas
+        </td>
+        <td colspan=5>
+            sets canvas size
+        </td>
+    </tr>
 </table>
 
 Events
