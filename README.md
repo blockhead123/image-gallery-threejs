@@ -316,7 +316,10 @@ Options
         <td>
             defaultWidth
         </td>
-        <td colspan=5>
+        <td>
+            Integer
+        </td>
+        <td colspan=4>
             500
         </td>
     </tr>
@@ -327,7 +330,10 @@ Options
         <td>
             defaultHeight
         </td>
-        <td colspan=5>
+        <td>
+            Integer
+        </td>
+        <td colspan=4>
             500
         </td>
     </tr>
