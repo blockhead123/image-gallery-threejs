@@ -37,7 +37,7 @@ Example
 
     <script>
     $(function(){
-      $.ig3js({
+      $('.box').ig3js({
           manifest: [
               {src:"image1.jpg", id:"image1"},
               {src:"image2.jpg", id:"image2"},
@@ -51,6 +51,7 @@ Example
         });
     });
     </script>
+    <div class="box"></div>
 
 Options
 -------
