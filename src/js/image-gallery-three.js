@@ -7,7 +7,7 @@
 // I have reinvented the structure and made it jquery based as well as making it a plugin so that usage and customization is easily done
 
 (function( $ ) {
-    $.ig3js = function( options ) {
+    $.fn.ig3js = function( options ) {
 
         // DEFAULT OPTIONS
         var settings = $.extend({
@@ -30,7 +30,11 @@
             onImageLoadComplete: null,
             onImageLoad: null,
             onNavigateComplete: null,
-            stats: false
+            stats: false,
+            canvasWindow: {
+                defaultWidth: window.innerWidth,
+                defaultHeight: window.innerHeight
+            }
         }, options );
 
         var ig3js = this;
@@ -64,8 +68,15 @@
             // SCENE
             scene = new THREE.Scene();
 
+         //   wndw = window;
+
+            wndw = {
+                innerWidth: settings.canvasWindow.defaultWidth,
+                innerHeight: settings.canvasWindow.defaultHeight
+            };
+
             // CAMERA
-            camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 20000);
+            camera = new THREE.PerspectiveCamera( 45, wndw.innerWidth / wndw.innerHeight, 1, 20000);
             camera.position.set( 0, 100, 1000 );
             scene.add(camera);
 
@@ -75,10 +86,8 @@
             } else {
                 renderer = new THREE.CanvasRenderer();
             }
-
             // CONTAINER
-            var container = document.createElement('div');
-            document.body.appendChild(container);
+            var container = this[0];
             container.appendChild(renderer.domElement);
 
             // POINT LIGHT
@@ -168,8 +177,8 @@
                 }
 
                 // MOUSE
-                if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);   /** DOMMouseScroll is for mozilla. */
-                window.onmousewheel = document.onmousewheel = wheel;                                    /** IE/Opera. */
+//                if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);   /** DOMMouseScroll is for mozilla. */
+//                window.onmousewheel = document.onmousewheel = wheel;                                    /** IE/Opera. */
 
                 document.addEventListener('mousedown', onDocumentMouseDown, false);
 
@@ -477,9 +486,9 @@
         };
 
         function resizeHandler() {
-            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.aspect = wndw.innerWidth / wndw.innerHeight;
             camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setSize(wndw.innerWidth, wndw.innerHeight);
             render();
         }
 
@@ -498,7 +507,7 @@
         function onDocumentMouseDown(event) {
             event.preventDefault();
 
-            var vector = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1, - ( event.clientY / window.innerHeight ) * 2 + 1, 0.5 );
+            var vector = new THREE.Vector3( ( event.clientX / wndw.innerWidth ) * 2 - 1, - ( event.clientY / wndw.innerHeight ) * 2 + 1, 0.5 );
             projector.unprojectVector( vector, camera );
             var raycaster = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
             var intersects = raycaster.intersectObjects( group.children );

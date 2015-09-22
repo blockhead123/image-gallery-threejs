@@ -11,7 +11,6 @@
 </head>
 <body>
 
-<div class="box"></div>
 <script type='text/javascript' src='//code.jquery.com/jquery-1.10.1.js'></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js"></script>
 <script type="text/javascript" src="js/assets.min.js"></script>
@@ -20,10 +19,9 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js"></script>
 
 <script type="text/javascript" src="js/image-gallery-three.min.js"></script>
-
 <script type='text/javascript'>//<![CDATA[
 $(function(){
-    var box = $.ig3js({
+    var box = $(".ig3js-canvas").ig3js({
         manifest: [
             {src:"image1.jpg", id:"image1"},
             {src:"image2.jpg", id:"image2"},
@@ -31,44 +29,48 @@ $(function(){
             {src:"image4.jpg", id:"image4"},
             {src:"image5.jpg", id:"image5"},
             {src:"image6.jpg", id:"image6"},
-            {src:"image7.jpg", id:"image7"}
+            {src:"image7.jpg", id:"image7"},
         ],
         imagePath: 'images/',
         alphaBackground: true,
         onNavigateComplete: function(obj){
        //     console.log("navigation complete");
        //     console.log(obj);
+        },
+        canvasWindow:{
+            defaultWidth: 500,
+            defaultHeight: 500
         }
     });
 
-    $(".next").click(function(){
+    $(".ig3js-nav .next").click(function(){
         box.navigate.next();
         return false;
     });
 
-    $(".prev").click(function(){
+    $(".ig3js-nav .prev").click(function(){
         box.navigate.prev();
         return false;
     });
 
-    $(".defP").click(function(){
+    $(".ig3js-perspectives .defP").click(function(){
         box.perspective.default();
         return false;
     });
 
-    $(".trP").click(function(){
+    $(".ig3js-perspectives .trP").click(function(){
         box.perspective.topRight();
         return false;
     });
 
-    $(".tlP").click(function(){
+    $(".ig3js-perspectives .tlP").click(function(){
         box.perspective.topLeft();
         return false;
     });
 
     for(count=1; count<=7; count++){
-        $(".goto").append('<a href="#" class="goto'+count+'" pos="'+(count-1)+'"> '+count+' </a>');
-        $(".goto"+count).click(function(){
+        $(".ig3js-nav .goto").append('<a href="#" class="goto'+count+'" pos="'+(count-1)+'"> '+count+' </a>');
+        $(".ig3js-nav .goto"+count).click(function(){
             box.navigate.goTo($(this).attr("pos"));
             return false;
         });
@@ -78,11 +80,15 @@ $(function(){
 
 </script>
 <a href="https://github.com/blockhead123/image-gallery-threejs/" id="fork">Fork me on GitHub</a>
-<a href="#" class="prev">prev</a><br />
-<div class="goto"></div>
-<a href="#" class="next">next</a><br />
-<a href="#" class="defP">default perspective</a><br />
-<a href="#" class="trP">top right perspective</a><br />
-<a href="#" class="tlP">top left perspective</a><br />
-</body>
+<div class="ig3js-canvas"></div>
+<div class="ig3js-nav">
+    <a href="#" class="prev">previous</a>
+    <span class="goto"></span>
+    <a href="#" class="next">next</a> <br />
+</div>
+<div class="ig3js-perspectives">
+    <a href="#" class="defP">default</a>
+    <a href="#" class="trP">top right</a>
+    <a href="#" class="tlP">top left</a>
+</div></body>
 </html>
