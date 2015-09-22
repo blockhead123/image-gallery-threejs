@@ -295,6 +295,10 @@ Options
         </td>
     </tr>
     <tr>
+      <td colspan=7>
+      </td>
+    </tr>
+    <tr>
         <td>
             canvasWindow
         </td>
@@ -303,6 +307,28 @@ Options
         </td>
         <td colspan=5>
             sets canvas size
+        </td>
+    </tr>
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            defaultWidth
+        </td>
+        <td colspan=5>
+            500
+        </td>
+    </tr>
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            defaultHeight
+        </td>
+        <td colspan=5>
+            500
         </td>
     </tr>
 </table>
