@@ -37,7 +37,7 @@ Example
 
     <script>
     $(function(){
-      $.ig3js({
+      $('.box').ig3js({
           manifest: [
               {src:"image1.jpg", id:"image1"},
               {src:"image2.jpg", id:"image2"},
@@ -51,6 +51,7 @@ Example
         });
     });
     </script>
+    <div class="box"></div>
 
 Options
 -------
@@ -291,6 +292,49 @@ Options
         </td>
         <td colspan=4>
             sets if stats is shown or hidden.
+        </td>
+    </tr>
+    <tr>
+      <td colspan=7>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            canvasWindow
+        </td>
+        <td>
+            canvas
+        </td>
+        <td colspan=5>
+            sets canvas size
+        </td>
+    </tr>
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            defaultWidth
+        </td>
+        <td>
+            Integer
+        </td>
+        <td colspan=4>
+            500
+        </td>
+    </tr>
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            defaultHeight
+        </td>
+        <td>
+            Integer
+        </td>
+        <td colspan=4>
+            500
         </td>
     </tr>
 </table>
