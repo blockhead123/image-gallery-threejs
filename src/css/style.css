@@ -36,6 +36,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 50px;
+    width: 70%;
 }
 .ig3js-perspectives a,
 .ig3js-nav a{
@@ -49,10 +50,12 @@ body {
     color: #000;
     font-family: helvetica, arial;
     text-align: center;
+    text-decoration: none;
 }
 
 .ig3js-perspectives a:hover,
 .ig3js-nav a:hover{
     color: #fff;
+    text-decoration: none;
 
 }
