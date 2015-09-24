@@ -1,0 +1,581 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Image-gallery-threejs by blockhead123</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Image-gallery-threejs</h1>
+        <p class="header">Threejs Based Gallery on JQuery</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/blockhead123/image-gallery-threejs/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/blockhead123/image-gallery-threejs/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/blockhead123/image-gallery-threejs">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/blockhead123">blockhead123</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="image-gallery-threejs" class="anchor" href="#image-gallery-threejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Gallery Threejs</h1>
+
+<p>Threejs based Gallery/Slider Plugin for JQuery.
+  This was forked from djankey's "WebGL Carousel  - Three.js" <a href="http://jsdo.it/djankey/carousel_webgl">http://jsdo.it/djankey/carousel_webgl</a> it didn't have jquery handling on it as well as better handling of controls for customization. Works well on IOS ipad and iphone aswell ad desktop PCS.</p>
+
+<h2>
+<a id="required-libraries" class="anchor" href="#required-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Required Libraries:</h2>
+
+<p><strong>Three.js</strong>
+<a href="https://github.com/mrdoob/three.js/">https://github.com/mrdoob/three.js/</a></p>
+
+<p><strong>Stats.js</strong>
+<a href="https://github.com/mrdoob/stats.js/">https://github.com/mrdoob/stats.js/</a></p>
+
+<p><strong>TweenMax</strong>
+<a href="http://www.greensock.com/gsap-js/">http://www.greensock.com/gsap-js/</a></p>
+
+<p><strong>PreloadJS</strong>
+<a href="http://www.createjs.com/#!/PreloadJS">http://www.createjs.com/#!/PreloadJS</a></p>
+
+<h2>
+<a id="browser-compatibility" class="anchor" href="#browser-compatibility" aria-hidden="true"><span class="octicon octicon-link"></span></a>Browser Compatibility</h2>
+
+<ul>
+<li>Firefox - 30.0.0 +</li>
+<li>Chrome - 35.0.0 +</li>
+<li>Explorer: 9 +</li>
+<li>Ipad Safari: 7.0.0 +</li>
+<li>Iphone Safari: 7.0.0 +</li>
+<li>IOS Safari: 7.0.0 +<br>
+</li>
+<li>Android Chrome: not tested help test :)</li>
+<li>IOS Chrome: not tested help test :)</li>
+</ul>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://image-gallery-threejs.zholpe.com/">Demo</a>
+</h2>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<pre><code>&lt;script&gt;
+$(function(){
+  $('.box').ig3js({
+      manifest: [
+          {src:"image1.jpg", id:"image1"},
+          {src:"image2.jpg", id:"image2"},
+          {src:"image3.jpg", id:"image3"},
+          {src:"image4.jpg", id:"image4"},
+          {src:"image5.jpg", id:"image5"},
+          {src:"image6.jpg", id:"image6"},
+          {src:"image7.jpg", id:"image7"}
+        ],
+        imagePath: 'images/'
+    });
+});
+&lt;/script&gt;
+&lt;div class="box"&gt;&lt;/div&gt;
+</code></pre>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Default
+        </th>
+        <th colspan="3">
+            Description
+        </th>
+        <th>
+            Example
+        </th>
+    </tr>
+    <tr>
+        <td>
+            manifest
+        </td>
+        <td>
+            Array
+        </td>
+        <td>
+            Null
+        </td>
+        <td colspan="3">
+            List of image paths
+        </td>
+        <td>
+            [
+              {src:"image1.jpg", id:"image1"},
+              {src:"image2.jpg", id:"image2"},
+              {src:"image3.jpg", id:"image3"},
+              {src:"image4.jpg", id:"image4"},
+              {src:"image5.jpg", id:"image5"},
+              {src:"image6.jpg", id:"image6"},
+              {src:"image7.jpg", id:"image7"}
+            ]
+        </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+      </td>
+    </tr>
+    <tr>
+        <td>
+            imagePath
+        </td>
+        <td>
+            String
+        </td>
+        <td>
+            Null
+        </td>
+        <td colspan="4">
+            Path to the specific image listings
+        </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+      </td>
+    </tr>
+    <tr>
+        <td>
+            dx
+        </td>
+        <td>
+            Number
+        </td>
+        <td>
+            300
+        </td>
+        <td colspan="4">
+            horizontal spacing of Images
+        </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+      </td>
+    </tr>
+    <tr>
+        <td>
+            dz
+        </td>
+        <td>
+            Number
+        </td>
+        <td>
+            300
+        </td>
+        <td colspan="4">
+            Vertical spacing of Images
+        </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+      </td>
+    </tr>
+    <tr>
+        <td>
+            deltaRotation
+        </td>
+        <td>
+            Number
+        </td>
+        <td>
+            45
+        </td>
+        <td colspan="4">
+            Degress Rotation of the non active images
+        </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+      </td>
+    </tr>
+    <tr>
+        <td>
+            planeSize
+        </td>
+        <td>
+            Number
+        </td>
+        <td>
+            500
+        </td>
+        <td colspan="4">
+            Size of the active plane
+        </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+      </td>
+    </tr>
+    <tr>
+        <td>
+            alphaBackground
+        </td>
+        <td>
+            Boolean
+        </td>
+        <td>
+            true
+        </td>
+        <td colspan="4">
+            Setting if the background is transparent
+        </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+      </td>
+    </tr>
+    <tr>
+        <td>
+            antialias
+        </td>
+        <td>
+            Boolean
+        </td>
+        <td>
+            true
+        </td>
+        <td colspan="4">
+            Setting if the renderer processes the objects with antialias
+        </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+      </td>
+    </tr>
+    <tr>
+        <td colspan="7">
+            progress
+        </td>
+    </tr>
+    <tr>
+        <td>
+            - light
+        </td>
+        <td>
+            Hex
+        </td>
+        <td>
+            "#ff0000"
+        </td>
+        <td colspan="4">
+            Setting the color of the progress bar's light aspect
+        </td>
+    </tr>
+    <tr>
+        <td>
+            - ambientLight
+        </td>
+        <td>
+            Hex
+        </td>
+        <td>
+            "#ffffff"
+        </td>
+        <td colspan="4">
+            Setting the color of the progress bar's ambient light aspect
+        </td>
+    </tr>
+    <tr>
+        <td>
+            - position
+        </td>
+        <td>
+            Array
+        </td>
+        <td>
+            [0,100,0]
+        </td>
+        <td colspan="4">
+            Setting the position of the progress bar
+        </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+      </td>
+    </tr>
+    <tr>
+        <td>
+            stats
+        </td>
+        <td>
+            Boolean
+        </td>
+        <td>
+            false
+        </td>
+        <td colspan="4">
+            sets if stats is shown or hidden.
+        </td>
+    </tr>
+    <tr>
+      <td colspan="7">
+      </td>
+    </tr>
+    <tr>
+        <td>
+            canvasWindow
+        </td>
+        <td>
+            canvas
+        </td>
+        <td colspan="5">
+            sets canvas size
+        </td>
+    </tr>
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            defaultWidth
+        </td>
+        <td>
+            Integer
+        </td>
+        <td colspan="4">
+            500
+        </td>
+    </tr>
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            defaultHeight
+        </td>
+        <td>
+            Integer
+        </td>
+        <td colspan="4">
+            500
+        </td>
+    </tr>
+</table>
+
+<h2>
+<a id="events" class="anchor" href="#events" aria-hidden="true"><span class="octicon octicon-link"></span></a>Events</h2>
+
+<table>
+    <tr>
+      <td>
+        <b>onImageLoadProgress</b>
+      </td>
+      <td colspan="2">
+        Image load progress
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>onImageLoadComplete</b>
+      </td>
+      <td colspan="2">
+        Image load complete
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>onImageLoad</b>
+      </td>
+      <td colspan="2">
+        Image load initialization
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>onNavigateComplete</b>
+      </td>
+      <td colspan="2">
+        Navigation Complete
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td colspan="2">
+        Parameters
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        obj
+      </td>
+      <td>
+        active plane
+      </td>
+    </tr>
+</table>
+
+<h2>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods</h2>
+
+<table>
+  <tr>
+    <th>
+      Execution
+    </th>
+    <th colspan="3">
+      Description
+    </th>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.next();
+    </td>
+    <td colspan="3">
+      Animates to the next scene
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.prev();
+    </td>
+    <td colspan="3">
+      Animates to the previous scene
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.goTo(&lt;index&gt;);
+    </td>
+    <td colspan="3">
+      Animates to the a specific scene
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td colspan="3">
+      <b>Parameter</b>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+      index
+    </td>
+    <td>
+      Number
+    </td>
+    <td>
+      base zero position of the plane in an array.
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td colspan="3">
+      <b>Example</b>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td colspan="3">
+            $(function(){<br>
+                var box = $.ig3js({<br>
+                    manifest: [<br>
+                        {src:"image1.jpg", id:"image1"},<br>
+                        {src:"image2.jpg", id:"image2"},<br>
+                        {src:"image3.jpg", id:"image3"},<br>
+                    ],<br>
+                    imagePath: 'images/',<br>
+                });<br>
+                box.navigate.goTo(2);<br>
+            });<br><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.perspective.default();
+    </td>
+    <td colspan="3">
+      Sets the camera perspective default
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.perspective.topRight();
+    </td>
+    <td colspan="3">
+      Sets the camera perspective top right
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      &lt;object&gt;.perspective.topLeft();
+    </td>
+    <td colspan="3">
+      Sets the camera perspective top left
+    </td>
+  </tr>
+</table>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
