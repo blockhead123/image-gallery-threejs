@@ -19,6 +19,7 @@ body {
     width: 149px;
     height: 149px;
     text-indent: -9999px;
+    z-index: 9999;
 }
 
 
