@@ -16,7 +16,8 @@
             dx: 300,
             dz: 300,
             deltaRotation: 45,
-            planeSize: 500,
+            planeSizeW: 500,
+            planeSizeH: 500,
             manifest: [],
             imagePath: '',
             alphaBackground: true,
@@ -52,7 +53,8 @@
             len,
             select = 0,
             tweenTime = 0.8,
-            planeSize = settings.planeSize,
+            planeSizeW = settings.planeSizeW,
+            planeSizeH = settings.planeSizeH,
             dx = settings.dx,
             dz = settings.dz,
             show = 2,
@@ -101,7 +103,7 @@
 
             // CAROUSEL GROUP
             group = new THREE.Object3D();
-            group.position.y = planeSize/2;
+            group.position.y = planeSizeH/2;
             scene.add(group);
 
             // PRELOADER
@@ -167,7 +169,7 @@
                     var img_material = new THREE.MeshBasicMaterial( { map: img_texture, depthWrite:true, depthTest: true, transparent:true } );
 
                     // mesh / plane
-                    var plane = new THREE.Mesh(new THREE.PlaneGeometry(planeSize, planeSize), img_material);
+                    var plane = new THREE.Mesh(new THREE.PlaneGeometry(planeSizeW, planeSizeH), img_material);
                     plane.overdraw = true;
                     plane.name = manifest[i].id;
                     plane.position.x = i * dx;
