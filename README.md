@@ -177,7 +177,7 @@ Options
     </tr>
     <tr>
         <td>
-            planeSize
+            planeSizeW
         </td>
         <td>
             Number
@@ -186,7 +186,21 @@ Options
             500
         </td>
         <td colspan=4>
-            Size of the active plane
+            Size of the plane Width
+        </td>
+    </tr>
+    <tr>
+        <td>
+            planeSizeH
+        </td>
+        <td>
+            Number
+        </td>
+        <td>
+            500
+        </td>
+        <td colspan=4>
+            Size of the plane Height
         </td>
     </tr>
     <tr>
