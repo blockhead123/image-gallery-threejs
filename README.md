@@ -29,7 +29,7 @@ Browser Compatibility
 + Android Chrome: not tested help test :)
 + IOS Chrome: not tested help test :)
 
-[Demo](http://image-gallery-threejs.zholpe.com/)
+[Demo](http://image-gallery-threejs.oso-link.com/)
 -------
 
 Example
