@@ -44,7 +44,7 @@
         var scene,
             camera,
             renderer,
-            projector,
+            raycaster,
             stats,
             positions,
             group,
@@ -192,8 +192,8 @@
                 event.preventDefault();
             }
 
-            // PROJECTOR
-            projector = new THREE.Projector();
+            // RAYCASTER
+            raycaster = new THREE.Raycaster(); // create once
 
             if(settings.stats == true){
                 // STATS
@@ -510,8 +510,8 @@
             event.preventDefault();
 
             var vector = new THREE.Vector3( ( event.clientX / wndw.innerWidth ) * 2 - 1, - ( event.clientY / wndw.innerHeight ) * 2 + 1, 0.5 );
-            projector.unprojectVector( vector, camera );
-            var raycaster = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
+            
+            raycaster.setFromCamera( vector, camera );
             var intersects = raycaster.intersectObjects( group.children );
 
             if ( intersects.length > 0 ) {

@@ -41,6 +41,10 @@ body {
     padding: 50px;
     width: 70%;
 }
+.ig3js-canvas canvas{
+    margin-left: auto;
+    margin-right: auto;
+}
 .ig3js-perspectives a,
 .ig3js-nav a{
     border: 0.1em solid;
