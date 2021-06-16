@@ -73,8 +73,8 @@
          //   wndw = window;
 
             wndw = {
-                innerWidth: settings.canvasWindow.defaultWidth,
-                innerHeight: settings.canvasWindow.defaultHeight
+                innerWidth: ig3js.width(),
+                innerHeight: 500
             };
 
             // CAMERA
@@ -165,6 +165,17 @@
                     // texture, material
                     slides[i] = {side:1, dif:0, rotation:0};
                     var img_texture = new THREE.Texture(queue.getResult(manifest[i].id));
+                    var imageAspect =  img_texture.image.width / img_texture.image.height;
+                    var planeAspect =  planeSizeW / planeSizeH;
+
+                    var horizontalDrawAspect = imageAspect / planeAspect;
+                    var verticalDrawAspect = 1;
+                    if (horizontalDrawAspect < 1) {
+                        verticalDrawAspect /= horizontalDrawAspect;
+                        horizontalDrawAspect = 1;
+                    }
+                    
+
                     img_texture.needsUpdate = true;
                     var img_material = new THREE.MeshBasicMaterial( { map: img_texture, depthWrite:true, depthTest: true, transparent:true } );
 
@@ -173,6 +184,9 @@
                     plane.overdraw = true;
                     plane.name = manifest[i].id;
                     plane.position.x = i * dx;
+                    plane.scale.x = horizontalDrawAspect;
+                    plane.scale.y = verticalDrawAspect;
+                    console.log();
                     group.add(plane);
 
                     planes[i] = plane;
@@ -502,8 +516,22 @@
             render();
         }
 
+
+        function resizeRendererToDisplaySize(renderer) {
+            const width = ig3js.width();
+            const height = ig3js.height();
+            const needResize = ig3js.width() !== width || ig3js.height() !== height;
+            if (needResize) {
+              renderer.setSize(width, height, false);
+            }
+            return needResize;
+          }
         function render() {
+            ig3js.find('canvas').width(ig3js.width());
+            ig3js.find('canvas').height(settings.canvasWindow.defaultHeight);
             renderer.render( scene, camera );
+            camera.aspect = ig3js.width() / settings.canvasWindow.defaultHeight;
+            camera.updateProjectionMatrix();   
         }
 
         function onDocumentMouseDown(event) {
